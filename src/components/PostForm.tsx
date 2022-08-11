@@ -11,12 +11,12 @@ function PostForm({visible, onExit}: {visible: boolean, onExit: () => void}) {
     return (
         <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center ">
             <div className="bg-gray-800 p-2 rounded w-72">
-                <button className="relative m-1 flex justify-start]" onClick={() => onExit()}>X</button>
+                <button className="relative m-1 flex justify-start text-white" onClick={() => onExit()}>X</button>
 
                 <h1 className="font-semibold text-center text-xl text-white">
                     Create Post
                 </h1>
-                <p className="text-center text-white-700 mb-5">Sign in</p>
+                <p className="text-center text-white-700 mb-5"></p>
 
                 <div className="flex flex-col">
                     <input

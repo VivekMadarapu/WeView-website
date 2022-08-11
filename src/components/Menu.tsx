@@ -1,13 +1,11 @@
 import { BsPlus } from 'react-icons/bs';
 import React from "react";
-import PostForm from "./PostForm";
 
-function Menu () {
-    const [visible, setVisible] = React.useState(false);
+function Menu ({formChanged}: {formChanged: (send: boolean) => void}) {
 
     const MenuIcon = ({icon}: {icon: any}) => {
         return(
-            <button className="sidebar-icon" onClick={() => setVisible(true)}>
+            <button className="sidebar-icon" onClick={() => formChanged(true)}>
                 {icon}
             </button>
         );
@@ -21,9 +19,6 @@ function Menu () {
             <div className="absolute top-[calc(100%-64px)] left-[calc(100%-64px)] h-16 w-16 m-0 flex flex-col
                     bg-gray-900 shadow-lg text-center">
                 <MenuIcon icon={<BsPlus size="32"/>} />
-                <PostForm visible={visible} onExit={() => {
-                    setVisible(false)
-                }}/>
             </div>
         </div>
     );
